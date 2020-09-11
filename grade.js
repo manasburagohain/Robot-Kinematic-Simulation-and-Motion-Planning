@@ -18,43 +18,43 @@ grade =
         "test results": {
           "Test 8": {
             "Status": "Failed", 
-            "Stderr": "[ERROR] wrong element when extract\nError when processing: 3037 1194 8211 9533 5749 7023 2666 9416 6186 6378 9143 9542 3732 6818 5883 447 1639 256 2392 9593 \n"
+            "Stderr": "[ERROR] wrong element when extract\nError when processing: 5177 3070 5003 4529 1222 9171 2159 8914 850 1633 1439 9699 776 5284 4947 1503 3140 6236 8499 788 \n"
           }, 
           "Test 9": {
             "Status": "Failed", 
-            "Stderr": "[ERROR] wrong element when extract\nError when processing: 9939 5151 7422 9581 2790 3745 2168 4492 6273 6875 1691 3614 1206 654 7860 8107 3072 8076 6959 9689 \n"
+            "Stderr": "[ERROR] wrong element when extract\nError when processing: 7121 720 9866 756 7669 4786 1845 7529 2038 6514 9671 9128 202 5414 9520 1828 6563 805 1615 4386 \n"
           }, 
           "Test 2": {
             "Status": "Failed", 
-            "Stderr": "[ERROR] wrong element when extract\nError when processing: 1297 4426 5848 8800 7796 3267 5975 772 4664 9076 7199 8970 218 2694 6770 8262 8600 8155 8044 5028 \n"
+            "Stderr": "[ERROR] wrong element when extract\nError when processing: 8644 9940 8827 9819 7949 1616 124 7669 5336 9100 6948 5741 1332 9528 628 7516 6034 4980 5045 9401 \n"
           }, 
           "Test 3": {
             "Status": "Failed", 
-            "Stderr": "[ERROR] wrong element when extract\nError when processing: 4346 5012 8882 207 6994 3185 8003 3547 6942 9076 9277 7768 104 5219 5181 3276 9608 1762 6550 8843 \n"
+            "Stderr": "[ERROR] wrong element when extract\nError when processing: 7165 5688 4860 9074 5639 607 5859 6148 6471 9650 6730 1192 6162 9583 4162 9949 9660 6066 93 6386 \n"
           }, 
           "Test 0": {
             "Status": "Failed", 
-            "Stderr": "[ERROR] wrong element when extract\nError when processing: 5779 3963 5491 269 9105 9243 6308 4864 778 9581 6638 191 4278 563 827 7150 6564 1699 9990 1047 \n"
+            "Stderr": "[ERROR] wrong element when extract\nError when processing: 7071 9080 8118 3263 5711 4503 5732 8024 8789 7842 5185 3139 4380 1384 3163 3505 5121 3356 9109 7521 \n"
           }, 
           "Test 1": {
             "Status": "Failed", 
-            "Stderr": "[ERROR] wrong element when extract\nError when processing: 1038 6620 1737 1252 2121 6540 533 6914 4138 9327 5132 83 9475 158 6255 7652 7370 6658 6122 7803 \n"
+            "Stderr": "[ERROR] wrong element when extract\nError when processing: 7543 4589 3395 4831 5562 7770 8561 6233 1008 833 5909 713 566 9422 2718 5937 6056 3731 1420 3908 \n"
           }, 
           "Test 6": {
             "Status": "Failed", 
-            "Stderr": "[ERROR] wrong element when extract\nError when processing: 3059 8251 9357 5919 7731 5780 3221 5505 5967 3082 8301 1093 5513 1185 1812 2108 2455 9610 7555 4344 \n"
+            "Stderr": "[ERROR] wrong element when extract\nError when processing: 5017 325 6941 241 9147 9149 2763 5734 6057 466 7856 5053 7779 5135 7476 2990 9608 9659 9407 4696 \n"
           }, 
           "Test 7": {
             "Status": "Failed", 
-            "Stderr": "[ERROR] wrong element when extract\nError when processing: 8499 3591 1298 8890 7405 7365 3344 9933 8884 772 4036 2831 3632 6124 2707 5033 7459 8882 7462 2559 \n"
+            "Stderr": "[ERROR] wrong element when extract\nError when processing: 5196 7136 7972 8974 8211 9532 5268 1640 9472 3644 4259 5001 2493 6161 5920 9449 3480 6232 1466 9150 \n"
           }, 
           "Test 4": {
             "Status": "Failed", 
-            "Stderr": "[ERROR] wrong element when extract\nError when processing: 9476 1378 7336 5335 5958 8735 9707 4640 912 5503 6661 6241 7436 2554 2138 5109 7505 6493 865 6138 \n"
+            "Stderr": "[ERROR] wrong element when extract\nError when processing: 571 6230 27 3038 6201 6201 4713 4306 2425 2504 7934 9625 5664 3367 4920 8680 1380 4243 1192 4598 \n"
           }, 
           "Test 5": {
             "Status": "Failed", 
-            "Stderr": "[ERROR] wrong element when extract\nError when processing: 3167 7257 9037 9318 4491 7495 8623 8599 7639 7335 5762 5459 9595 9595 9090 5446 8655 2182 7703 8785 \n"
+            "Stderr": "[ERROR] wrong element when extract\nError when processing: 9112 3690 3959 5339 2949 529 8766 1505 5129 4639 7407 6435 5723 6560 4859 8095 167 2595 3801 106 \n"
           }
         }, 
         "comments": [
