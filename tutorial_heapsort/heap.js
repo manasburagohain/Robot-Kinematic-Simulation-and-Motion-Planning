@@ -51,56 +51,34 @@ minheaper.insert = minheap_insert;
       as minheap.insert
 */
 
+function minheapify(heap , ind)
+{
+  let l = 2*ind + 1
+  let r = 2*ind + 2
+  let smallest = ind
+
+  if(l < heap.length && heap[l] < heap[smallest]){
+    smallest = l
+  }
+  if(r < heap.length && heap[r] < heap[smallest]){
+    smallest = r
+  }
+
+  if(smallest != ind){
+    [heap[ind], heap[smallest]] = [heap[smallest], heap[ind]]
+    minheapify(heap, smallest)
+  }
+}
 // define extract function for min binary heap
 function minheap_extract(heap) {
 
     // STENCIL: implement your min binary heap extract operation
-    let smallest = heap[1]
+  let smallest = heap[0]
+  heap[0] = heap[heap.length - 1]
+  heap.length--
+  minheapify(heap, 0)
 
-        /* When there are more than two elements in the array, we put the right most element at the first position
-            and start comparing nodes with the child nodes
-        */
-        if (heap.length > 2) {
-            heap[1] = heap[heap.length-1]
-            heap.splice(heap.length - 1)
-
-            if (heap.length === 3) {
-                if (heap[1] > heap[2]) {
-                    [heap[1], heap[2]] = [heap[2], heap[1]]
-                }
-                return smallest
-            }
-
-            let current = 1
-            let leftChildIndex = current * 2
-            let rightChildIndex = current * 2 + 1
-
-            while (heap[leftChildIndex] &&
-                    heap[rightChildIndex] &&
-                    (heap[current] < heap[leftChildIndex] ||
-                        heap[current] < heap[rightChildIndex])) {
-                if (heap[leftChildIndex] < heap[rightChildIndex]) {
-                    [heap[current], heap[leftChildIndex]] = [heap[leftChildIndex], heap[current]]
-                    current = leftChildIndex
-                } else {
-                    [heap[current], heap[rightChildIndex]] = [heap[rightChildIndex], heap[current]]
-                    current = rightChildIndex
-                }
-
-                leftChildIndex = current * 2
-                rightChildIndex = current * 2 + 1
-            }
-        }
-
-        /* If there are only two elements in the array, we directly splice out the first element */
-
-        else if (heap.length === 2) {
-            heap.splice(1, 1)
-        } else {
-            return null
-        }
-
-        return smallest
+  return smallest
 }
 
 // assign extract function within minheaper object
