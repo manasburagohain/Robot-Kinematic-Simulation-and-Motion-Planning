@@ -28,7 +28,7 @@ function initSearchGraph() {
     // create the search queue
     visit_queue = [];
 
-    neighbours = [[-1,0],[1,0],[0,-1],[0,1]]
+    neighbours = [[-1,0],[1,0],[0,1],[0,-1]]
 
     counter = 0;
     // initialize search graph as 2D array over configuration space
@@ -56,7 +56,10 @@ function initSearchGraph() {
                 else
                     G[iind][jind].priority = G[iind][jind].distance + heuristic(G[iind][jind].x, G[iind][jind].y);
                 G[iind][jind].queued = true;
-                minheap_insert(visit_queue, G[iind][jind]);
+                if(search_alg === "depth-first")
+                    stack_insert(visit_queue, G[iind][jind]);
+                else
+                    minheap_insert(visit_queue, G[iind][jind]);
             }
 
         }
@@ -156,11 +159,12 @@ function iterateGreedySearch() {
 
     for(ind = 0; ind < neighbours.length; ind++){
         neigh = G[curr_node.i + neighbours[ind][0]][curr_node.j + neighbours[ind][1]]
-        if(neigh.visited === false && testCollision([neigh.x, neigh.y]) === false){
+        if(neigh.visited === false && neigh.queued === false && testCollision([neigh.x, neigh.y]) === false){
             if(neigh.distance > G[curr_node.i][curr_node.j].distance + eps){
                 neigh.parent = curr_node;
                 neigh.distance = G[curr_node.i][curr_node.j].distance + eps;
-                neigh.priority = heuristic(neigh.x, neigh.y); 
+                neigh.priority = heuristic(neigh.x, neigh.y);
+                neigh.queued = true; 
                 draw_2D_configuration([neigh.x, neigh.y], "queued")
                 minheap_insert(visit_queue, neigh);
             }
@@ -227,6 +231,60 @@ function iterateBreadthSearch() {
 
 
 }
+
+function iterateDepthSearch() {
+
+
+    // STENCIL: implement a single iteration of a graph search algorithm
+    //   for A-star (or DFS, BFS, Greedy Best-First)
+    //   An asynch timing mechanism is used instead of a for loop to avoid
+    //   blocking and non-responsiveness in the browser.
+    //
+    //   Return "failed" if the search fails on this iteration.
+    //   Return "succeeded" if the search succeeds on this iteration.
+    //   Return "iterating" otherwise.
+    //
+    //   Provided support functions:
+    //
+    //   testCollision - returns whether a given configuration is in collision
+    //   drawHighlightedPathGraph - draws a path back to the start location
+    //   draw_2D_configuration - draws a square at a given location
+    if(visit_queue.length === 0)
+        return "failed";
+
+    curr_node = stack_pop(visit_queue);
+    curr_node.queued = false;
+    curr_node.visited = true;
+    search_visited+=1;
+    draw_2D_configuration([curr_node.x,curr_node.y], "visited")
+    collision = testCollision([curr_node.x, curr_node.y])
+
+    if(collision === true)
+        return "failed";
+    
+    if (curr_node.x + (eps/2) >= q_goal[0] && curr_node.x - (eps/2) <= q_goal[0] && curr_node.y + (eps/2) >= q_goal[1] && curr_node.y - (eps/2) <= q_goal[1]) {
+       drawHighlightedPathGraph(curr_node);
+       search_iterate = false;
+       return "succeeded"; 
+    }
+
+    for(ind = 0; ind < neighbours.length; ind++){
+        neigh = G[curr_node.i + neighbours[ind][0]][curr_node.j + neighbours[ind][1]]
+        if(neigh.visited === false && testCollision([neigh.x, neigh.y]) === false){
+            if(neigh.distance > G[curr_node.i][curr_node.j].distance + eps){
+                neigh.parent = curr_node;
+                neigh.distance = G[curr_node.i][curr_node.j].distance + eps;
+                draw_2D_configuration([neigh.x, neigh.y], "queued")
+                stack_insert(visit_queue, neigh);
+            }
+        }
+    }
+    
+
+    return "iterating";
+
+
+}
 //////////////////////////////////////////////////
 /////     MIN HEAP IMPLEMENTATION FUNCTIONS
 //////////////////////////////////////////////////
@@ -236,6 +294,15 @@ function iterateBreadthSearch() {
 function heuristic(x, y) {
     return Math.sqrt(Math.pow((q_goal[0]-x),2)+Math.pow((q_goal[1]-y),2));
 }
+
+function stack_insert(stack, new_element){
+    stack.push(new_element);
+}
+
+function stack_pop(stack){
+    return stack.splice(stack.length-1);
+}
+    
 
 function minheap_insert(heap, new_element) {
 
