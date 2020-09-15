@@ -228,15 +228,9 @@ function animate() {
 
         // call iteration for the selected search algorithm
         switch (search_alg) {
-            case "depth-first":
-                search_result = iterateDepthSearch();
-                break;            
+            case "depth-first":            
             case "breadth-first":
-                search_result = iterateBreadthSearch();
-                break;
             case "greedy-best-first":
-                search_result = iterateGreedySearch();
-                break;
             case "A-star":
                 search_result = iterateGraphSearch();
                 break;
