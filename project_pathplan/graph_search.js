@@ -140,14 +140,6 @@ function iterateGraphSearch() {
 function heuristic(x, y) {
     return Math.sqrt(Math.pow((q_goal[0]-x),2)+Math.pow((q_goal[1]-y),2));
 }
-
-function stack_insert(stack, new_element){
-    stack.push(new_element);
-}
-
-function stack_pop(stack){
-    return stack.splice(stack.length-1);
-}
     
 
 function minheap_insert(heap, new_element) {
