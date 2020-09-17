@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a class="w3-bar-item w3-button w3-theme-l1">ROB 511 Assignment 1: Path Planning</a>
+    <a class="w3-bar-item w3-button w3-hide-small w3-hover-white">Manas Jyoti Buragohain</a>
+  </div>
+</div>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" >
+  
+  
+  <div class="w3-row w3-padding-64">
+    <div class="w3-container">
+      <h1 class="w3-text-teal">Breadth First Search</h1>
+      <p>Breadth First search is known as an uninformed search because it does not use any information about how far the robot has traveled or how far the
+robot is from the goal. BFS begins at the starting position of the robot (root node) and begins looking for the goal by expanding all of the successors
+of the root node. If those successors are not the goal, then BFS expands each of those nodes, and this loop continues until the goal node is reached. During the implementation of the algorithm we keep track of the nodes by maintaining a queue.</p>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="results/breadth_empty.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+    </div>
+    <div class="w3-third w3-container">  
+      <img src="results/breadth_misc.jpg" style="width:95%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+    </div>
+    <div class="w3-third w3-container">
+      <img src="results/breadth_narrow_1.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+    </div>
+    <div class="w3-third w3-container" style="margin-left:220px">  
+      <img src="results/breadth_narrow_2.jpg" style="width:95%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+    </div>
+    <div class="w3-third w3-container">
+      <img src="results/breadth_three_sections.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+    </div>
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-container">
+      <h1 class="w3-text-teal">Depth First Search</h1>
+      <p>Depth first search is the complement to breadth first search. It is also an uninformed search method. Starting from the root node it expands all the successors of the start node same as BFS. However after the first node, DFS always expands the last successor added.If DFS gets to a point where it can not find any more successors for the node it is currently expanding, it will then move to the newest discovered node that hasn’t been expanded. The stack data structure is used during implementation to maintain the Last In First Out order for nodes.</p>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="results/depth_empty.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+    </div>
+    <div class="w3-third w3-container">  
+      <img src="results/depth_misc.jpg" style="width:95%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+    </div>
+    <div class="w3-third w3-container">
+      <img src="results/depth_narrow_1.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+    </div>
+    <div class="w3-third w3-container" style="margin-left:220px">  
+      <img src="results/depth_narrow_2.jpg" style="width:95%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+    </div>
+    <div class="w3-third w3-container">
+      <img src="results/depth_three_sections.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+    </div>
+  </div>
+
+  <div class="w3-container">
+      <h1 class="w3-text-teal">A-star Search</h1>
+      <p>A* is like Dijkstra’s Algorithm in that it can be used to find a shortest path. A* is like Greedy Best-First-Search in that it can use a heuristic to guide itself. It combines the pieces of information that Dijkstra’s Algorithm uses (favoring vertices that are close to the starting point) and information that Greedy Best-First-Search uses (favoring vertices that are close to the goal). The heuristic followed by A* balances between the exact cost of the node from the start and the estimated cost of the node to the goal to optimize the final path.</p>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="results/astar_empty.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+    </div>
+    <div class="w3-third w3-container">  
+      <img src="results/astar_misc.jpg" style="width:95%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+    </div>
+    <div class="w3-third w3-container">
+      <img src="results/astar_three_sections.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+    </div>
+    <div class="w3-third w3-container" style="margin-left:220px">  
+      <img src="results/astar_narrow_1.jpg" style="width:95%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+    </div>
+    <div class="w3-third w3-container">
+      <img src="results/astar_narrow_2.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+    </div>
+  </div>
+
+  <div class="w3-container">
+      <h1 class="w3-text-teal">Greedy Best First Search</h1>
+      <p>The Greedy Best-First-Search algorithm works by visiting vertices in the graph starting with the object’s starting point following some estimate (called a heuristic) of how far from the goal any vertex is. Instead of selecting the vertex closest to the starting point, it selects the vertex closest to the goal. Greedy Best-First-Search is not guaranteed to find a shortest path.</p>
+    </div>
+    <div class="w3-third" w3-container>
+      <img src="results/greedy_empty.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+    </div>
+    <div class="w3-third" w3-container>  
+      <img src="results/greedy_misc.jpg" style="width:95%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+    </div>
+    <div class="w3-third" w3-container>
+      <img src="results/greedy_three_sections.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+    </div>
+    <div class="w3-third">  
+      <img src="results/greedy_narrow_1.jpg" style="width:95%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+    </div>
+    <div class="w3-third" w3-container>
+      <img src="results/greedy_narrow_2.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+    </div>
+  </div>  
+
+
+  <div class="w3-container">
+      <h1 class="w3-text-teal">Results</h1>
+      <p>We observe that A* and BFS obtain the optimal path in all map scenarios. While, both A* and BFS have very high space complexity, A-star is more streamlined due to its heuristic. DFS has low space complexity and computation cost but it tends to result in suboptimal pathing. Greedy best first guided by its goal oriented heuristic tends to be fastest when goal is present in direct line of sight of the start but ends up being suboptimal otherwise.</p>
+    </div>
+    <div style="overflow-x:auto;">
+  <table>
+    <caption style="text-align:left">Table 1. Number of Iterations and Path Lengths for the search algorithms implemented.</caption>
+    <thead>
+      <tr>
+        <th class="tg-0pky" rowspan="2"></th>
+        <th class="tg-c3ow" colspan="2">'empty' map</th>
+        <th class="tg-c3ow" colspan="2">'misc' map</th>
+        <th class="tg-c3ow" colspan="2">'narrow1' map</th>
+        <th class="tg-c3ow" colspan="2">'narrow2' map</th>
+        <th class="tg-c3ow" colspan="2">'three-sections' map</th>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Search Iterations</td>
+        <td class="tg-0pky">Path Length</td>
+        <td class="tg-0pky">Search Iterations</td>
+        <td class="tg-0pky">Path Length</td>
+        <td class="tg-0pky">Search Iterations</td>
+        <td class="tg-0pky">Path Length</td>
+        <td class="tg-0pky">Search Iterations</td>
+        <td class="tg-0pky">Path Length</td>
+        <td class="tg-0pky">Search Iterations</td>
+        <td class="tg-0pky">Path Length</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-0pky">Breadth First Search</td>
+        <td class="tg-0pky">3501</td>
+        <td class="tg-0pky">8.00</td>
+        <td class="tg-0pky">3235</td>
+        <td class="tg-0pky">9.80</td>
+        <td class="tg-0pky">1567</td>
+        <td class="tg-0pky">8.00</td>
+        <td class="tg-0pky">2094</td>
+        <td class="tg-0pky">11.40</td>
+        <td class="tg-0pky">3165</td>
+        <td class="tg-0pky">14.20</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Depth First Search</td>
+        <td class="tg-0pky">1782</td>
+        <td class="tg-0pky">130.40</td>
+        <td class="tg-0pky">2289</td>
+        <td class="tg-0pky">98.20</td>
+        <td class="tg-0pky">1293</td>
+        <td class="tg-0pky">76.20</td>
+        <td class="tg-0pky">1181</td>
+        <td class="tg-0pky">65.00</td>
+        <td class="tg-0pky">1629</td>
+        <td class="tg-0pky">98.00</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">A-star Search</td>
+        <td class="tg-0pky">2240</td>
+        <td class="tg-0pky">8.00</td>
+        <td class="tg-0pky">2692</td>
+        <td class="tg-0pky">9.80</td>
+        <td class="tg-0pky">932</td>
+        <td class="tg-0pky">8.00</td>
+        <td class="tg-0pky">1528</td>
+        <td class="tg-0pky">11.40</td>
+        <td class="tg-0pky">2414</td>
+        <td class="tg-0pky">14.20</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Greedy Best First Search</td>
+        <td class="tg-0pky">81</td>
+        <td class="tg-0pky">8.00</td>
+        <td class="tg-0pky">2074</td>
+        <td class="tg-0pky">17.80</td>
+        <td class="tg-0pky">81</td>
+        <td class="tg-0pky">8.00</td>
+        <td class="tg-0pky">138</td>
+        <td class="tg-0pky">11.40</td>
+        <td class="tg-0pky">906</td>
+        <td class="tg-0pky">14.20</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  </div>
+  
+      
+</div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
