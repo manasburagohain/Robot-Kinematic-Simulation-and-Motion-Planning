@@ -55,19 +55,19 @@ robot is from the goal. BFS begins at the starting position of the robot (root n
 of the root node. If those successors are not the goal, then BFS expands each of those nodes, and this loop continues until the goal node is reached. During the implementation of the algorithm we keep track of the nodes by maintaining a queue.</p>
     </div>
     <div class="w3-third w3-container">
-      <img src="results/breadth_empty.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+      <img src="results/breadth_empty.jpg" style="width:95%" onclick="onClick(this)" alt="BFS on empty map">
     </div>
     <div class="w3-third w3-container">  
-      <img src="results/breadth_misc.jpg" style="width:95%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+      <img src="results/breadth_misc.jpg" style="width:95%" onclick="onClick(this)" alt="BFS on misc map">
     </div>
     <div class="w3-third w3-container">
-      <img src="results/breadth_narrow_1.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+      <img src="results/breadth_narrow_1.jpg" style="width:95%" onclick="onClick(this)" alt="BFS on narrow1 map">
     </div>
     <div class="w3-third w3-container" style="margin-left:220px">  
-      <img src="results/breadth_narrow_2.jpg" style="width:95%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+      <img src="results/breadth_narrow_2.jpg" style="width:95%" onclick="onClick(this)" alt="BFS on narrow2 map">
     </div>
     <div class="w3-third w3-container">
-      <img src="results/breadth_three_sections.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+      <img src="results/breadth_three_sections.jpg" style="width:95%" onclick="onClick(this)" alt="BFS on three sections map">
     </div>
   </div>
 
@@ -77,19 +77,19 @@ of the root node. If those successors are not the goal, then BFS expands each of
       <p>Depth first search is the complement to breadth first search. It is also an uninformed search method. Starting from the root node it expands all the successors of the start node same as BFS. However after the first node, DFS always expands the last successor added.If DFS gets to a point where it can not find any more successors for the node it is currently expanding, it will then move to the newest discovered node that hasn’t been expanded. The stack data structure is used during implementation to maintain the Last In First Out order for nodes.</p>
     </div>
     <div class="w3-third w3-container">
-      <img src="results/depth_empty.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+      <img src="results/depth_empty.jpg" style="width:95%" onclick="onClick(this)" alt="DFS on empty map">
     </div>
     <div class="w3-third w3-container">  
-      <img src="results/depth_misc.jpg" style="width:95%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+      <img src="results/depth_misc.jpg" style="width:95%" onclick="onClick(this)" alt="DFS on misc map">
     </div>
     <div class="w3-third w3-container">
-      <img src="results/depth_narrow_1.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+      <img src="results/depth_narrow_1.jpg" style="width:95%" onclick="onClick(this)" alt="DFS on narrow1 map">
     </div>
     <div class="w3-third w3-container" style="margin-left:220px">  
-      <img src="results/depth_narrow_2.jpg" style="width:95%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+      <img src="results/depth_narrow_2.jpg" style="width:95%" onclick="onClick(this)" alt="DFS on narrow2 map">
     </div>
     <div class="w3-third w3-container">
-      <img src="results/depth_three_sections.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+      <img src="results/depth_three_sections.jpg" style="width:95%" onclick="onClick(this)" alt="DFS on three sections map">
     </div>
   </div>
 
@@ -98,19 +98,19 @@ of the root node. If those successors are not the goal, then BFS expands each of
       <p>A* is like Dijkstra’s Algorithm in that it can be used to find a shortest path. A* is like Greedy Best-First-Search in that it can use a heuristic to guide itself. It combines the pieces of information that Dijkstra’s Algorithm uses (favoring vertices that are close to the starting point) and information that Greedy Best-First-Search uses (favoring vertices that are close to the goal). The heuristic followed by A* balances between the exact cost of the node from the start and the estimated cost of the node to the goal to optimize the final path.</p>
     </div>
     <div class="w3-third w3-container">
-      <img src="results/astar_empty.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+      <img src="results/astar_empty.jpg" style="width:95%" onclick="onClick(this)" alt="A* on empty map">
     </div>
     <div class="w3-third w3-container">  
-      <img src="results/astar_misc.jpg" style="width:95%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+      <img src="results/astar_misc.jpg" style="width:95%" onclick="onClick(this)" alt="A* on misc map">
     </div>
     <div class="w3-third w3-container">
-      <img src="results/astar_three_sections.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+      <img src="results/astar_three_sections.jpg" style="width:95%" onclick="onClick(this)" alt="A* on three sections map">
     </div>
     <div class="w3-third w3-container" style="margin-left:220px">  
-      <img src="results/astar_narrow_1.jpg" style="width:95%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+      <img src="results/astar_narrow_1.jpg" style="width:95%" onclick="onClick(this)" alt="A* on narrow1 map">
     </div>
     <div class="w3-third w3-container">
-      <img src="results/astar_narrow_2.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+      <img src="results/astar_narrow_2.jpg" style="width:95%" onclick="onClick(this)" alt="A* on narrow2 map">
     </div>
   </div>
 
@@ -119,19 +119,19 @@ of the root node. If those successors are not the goal, then BFS expands each of
       <p>The Greedy Best-First-Search algorithm works by visiting vertices in the graph starting with the object’s starting point following some estimate (called a heuristic) of how far from the goal any vertex is. Instead of selecting the vertex closest to the starting point, it selects the vertex closest to the goal. Greedy Best-First-Search is not guaranteed to find a shortest path.</p>
     </div>
     <div class="w3-third" w3-container>
-      <img src="results/greedy_empty.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+      <img src="results/greedy_empty.jpg" style="width:95%" onclick="onClick(this)" alt="Greedy BFS on empty map">
     </div>
     <div class="w3-third" w3-container>  
-      <img src="results/greedy_misc.jpg" style="width:95%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+      <img src="results/greedy_misc.jpg" style="width:95%" onclick="onClick(this)" alt="Greedy BFS on misc map">
     </div>
     <div class="w3-third" w3-container>
-      <img src="results/greedy_three_sections.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+      <img src="results/greedy_three_sections.jpg" style="width:95%" onclick="onClick(this)" alt="Greedy BFS on three sections map">
     </div>
     <div class="w3-third">  
-      <img src="results/greedy_narrow_1.jpg" style="width:95%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+      <img src="results/greedy_narrow_1.jpg" style="width:95%" onclick="onClick(this)" alt="Greedy BFS on narrow1 map">
     </div>
     <div class="w3-third" w3-container>
-      <img src="results/greedy_narrow_2.jpg" style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+      <img src="results/greedy_narrow_2.jpg" style="width:95%" onclick="onClick(this)" alt="Greedy BFS on narrow2 map">
     </div>
   </div>  
 
@@ -230,7 +230,7 @@ of the root node. If those successors are not the goal, then BFS expands each of
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-32">
       <img id="img01" class="w3-image">
       <p id="caption"></p>
     </div>
