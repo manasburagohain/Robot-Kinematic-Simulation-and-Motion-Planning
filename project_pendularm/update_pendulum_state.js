@@ -113,7 +113,7 @@ function set_PID_parameters(pendulum) {
 function PID(pendulum, accumulated_error, dt) {
     // STENCIL: implement PID controller
     // return: updated output in pendulum.control and accumulated_error
-    accumulated_error += pendulum.desired - pendulum.angle;
-    pendulum.control = (pendulum.desired - pendulum.angle) * pendulum.servo.kp + dt * accumulated_error * pendulum.servo.ki + (pendulum.angle_previous - pendulum.angle) * pendulum.servo.kd / dt;
+    accumulated_error += pendulum.desired - pendulum.angle
+    pendulum.control = (pendulum.desired - pendulum.angle) * pendulum.servo.kp + accumulated_error * pendulum.servo.ki + (pendulum.angle_previous - pendulum.angle) * pendulum.servo.kd / dt
     return [pendulum, accumulated_error];
 }
