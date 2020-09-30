@@ -19,14 +19,6 @@ function update_pendulum_state(numerical_integrator, pendulum, dt, gravity) {
     else if (numerical_integrator === "verlet") {
 
     // STENCIL: basic Verlet integration
-    var angle = pendulum.angle
-    var acc = pendulum_acceleration(pendulum, gravity)
-
-    pendulum.angle[0] = 2 * pendulum.angle[0] - pendulum.angle_previous[0] + acc[0] * Math.pow(dt, 2)
-    pendulum.angle[1] = 2 * pendulum.angle[1] - pendulum.angle_previous[1] + acc[1] * Math.pow(dt, 2)
-    pendulum.angle_dot[0] = (pendulum.angle[0] - pendulum.angle_previous[0]) / (2 * dt);
-    pendulum.angle_dot[1] = (pendulum.angle[1] - pendulum.angle_previous[1]) / (2 * dt);
-    pendulum.angle_previous = angle 
     }
     else if (numerical_integrator === "velocity verlet") {
 
@@ -103,11 +95,7 @@ function pendulum_acceleration(pendulum, gravity) {
 function init_verlet_integrator(pendulum, t, gravity) {
     // STENCIL: for verlet integration, a first step in time is needed
     // return: updated pendulum state and time
-    pendulum.angle_previous = pendulum.angle
-    pendulum.angle[0] = pendulum.angle[0] + pendulum.angle_dot[0] * dt + pendulum_acceleration(pendulum, gravity)[0] * Math.pow(dt,2) * 0.5
-    pendulum.angle[1] = pendulum.angle[1] + pendulum.angle_dot[1] * dt + pendulum_acceleration(pendulum, gravity)[1] * Math.pow(dt,2) * 0.5
-    t = t + dt
-    return [pendulum, t];
+    
 }
 
 function set_PID_parameters(pendulum) {
