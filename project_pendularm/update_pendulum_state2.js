@@ -94,36 +94,8 @@ function update_pendulum_state(numerical_integrator, pendulum, dt, gravity) {
 
 function pendulum_acceleration(pendulum, gravity) {
     // STENCIL: return acceleration(s) system equation(s) of motion 
-    var A1 = (pendulum.mass[0]+pendulum.mass[1]) * pendulum.length[0]
-    var B1 = pendulum.mass[1] * pendulum.length[1] * Math.cos(pendulum.angle[0] - pendulum.angle[1])
-    var C1 = pendulum.mass[1] * pendulum.length[1] * Math.pow(pendulum.angle_dot[1],2) * Math.sin(pendulum.angle[0] - pendulum.angle[1]) + (pendulum.mass[0] + pendulum.mass[1]) * gravity * Math.sin(pendulum.angle[0]) - (pendulum.control[0] / pendulum.length[0])
-    var A2 = pendulum.length[0] * Math.cos(pendulum.angle[0] - pendulum.angle[1])
-    var B2 = pendulum.length[1]
-    var C2 = - pendulum.length[0] * Math.pow(pendulum.angle_dot[0],2) * Math.sin(pendulum.angle[0] - pendulum.angle[1]) + gravity * Math.sin(pendulum.angle[1]) - (pendulum.control[1] / pendulum.mass[1] / pendulum.length[1]);
-    var a1 = (B1*C2-B2*C1)/(A1*B2-B1*A2);
-    var a2 = (C1*A2-C2*A1)/(A1*B2-B1*A2);
-
-    // var m1 = pendulum.mass[0];
-    // var m2 = pendulum.mass[1];
-    // var l1 = pendulum.length[0];
-    // var l2 = pendulum.length[1];
-    // var x1 = pendulum.angle[0];
-    // var x2 = pendulum.angle[1];
-    // var v1 = pendulum.angle_dot[0];
-    // var v2 = pendulum.angle_dot[1];
-    // var c1 = pendulum.control[0];
-    // var c2 = pendulum.control[1];
-    // // A1*a1 + B1*a2 +C1 = 0
-    // // A2*a1 + B2*a2 +C2 = 0
-
-    // var A1 = (m1+m2) * l1;
-    // var B1 = m2 * l2 * Math.cos(x1-x2);
-    // var C1 = m2*l2*v2*v2*Math.sin(x1-x2) + (m1+m2)*gravity*Math.sin(x1) - c1/l1;
-    // var A2 = l1*Math.cos(x1-x2);
-    // var B2 = l2;
-    // var C2 = -l1*v1*v1*Math.sin(x1-x2) + gravity*Math.sin(x2) - c2/m2/l2;
-    // var a1 = (B1*C2-B2*C1)/(A1*B2-B1*A2);
-    // var a2 = (C1*A2-C2*A1)/(A1*B2-B1*A2);
+    var a1 = ((pendulum.mass[1] * pendulum.length[1] * Math.cos(pendulum.angle[0] - pendulum.angle[1])) * (- pendulum.length[0] * Math.pow(pendulum.angle_dot[0],2) * Math.sin(pendulum.angle[0] - pendulum.angle[1]) + gravity * Math.sin(pendulum.angle[1]) - (pendulum.control[1] / pendulum.mass[1] / pendulum.length[1])) - (pendulum.length[1]) * (pendulum.mass[1] * pendulum.length[1] * Math.pow(pendulum.angle_dot[1],2) * Math.sin(pendulum.angle[0] - pendulum.angle[1]) + (pendulum.mass[0] + pendulum.mass[1]) * gravity * Math.sin(pendulum.angle[0]) - (pendulum.control[0] / pendulum.length[0]))) / (((pendulum.mass[0] + pendulum.mass[1]) * pendulum.length[0]) * (pendulum.length[1]) - (pendulum.mass[1] * pendulum.length[1] * Math.cos(pendulum.angle[0] - pendulum.angle[1])) * (pendulum.length[0] * Math.cos(pendulum.angle[0] - pendulum.angle[1])));
+    var a2 = ((pendulum.mass[1] * pendulum.length[1] * Math.pow(pendulum.angle_dot[1],2) * Math.sin(pendulum.angle[0] - pendulum.angle[1]) + (pendulum.mass[0] + pendulum.mass[1]) * gravity * Math.sin(pendulum.angle[0]) - (pendulum.control[0] / pendulum.length[0])) * (pendulum.length[0] * Math.cos(pendulum.angle[0] - pendulum.angle[1])) - (- pendulum.length[0] * Math.pow(pendulum.angle_dot[0],2) * Math.sin(pendulum.angle[0] - pendulum.angle[1]) + gravity * Math.sin(pendulum.angle[1]) - (pendulum.control[1] / pendulum.mass[1] / pendulum.length[1])) * ((pendulum.mass[0] + pendulum.mass[1]) * pendulum.length[0])) / (((pendulum.mass[0] + pendulum.mass[1]) * pendulum.length[0]) * (pendulum.length[1]) - (pendulum.mass[1] * pendulum.length[1] * Math.cos(pendulum.angle[0] - pendulum.angle[1])) * (pendulum.length[0] * Math.cos(pendulum.angle[0] - pendulum.angle[1])));
 
     return [a1, a2]    
 }
@@ -140,7 +112,7 @@ function init_verlet_integrator(pendulum, t, gravity) {
 
 function set_PID_parameters(pendulum) {
     // STENCIL: change pid parameters
-    pendulum.servo = {kp:[250,200], kd:[50,35], ki:[3,5]};  // no control
+    pendulum.servo = {kp:[200,200], kd:[50,35], ki:[3,5]};  // no control
     return pendulum;
 }
 
