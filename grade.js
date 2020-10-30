@@ -1,4 +1,4 @@
-//CI grader generates report at 30-10-2020-12-07-49
+//CI grader generates report at 30-10-2020-18-09-15
 grade = 
 {
   "manasjb": {
@@ -339,15 +339,15 @@ grade =
         ]
       }, 
       "FSMDance_Quaternion": {
-        "status": "PENDING", 
+        "status": "PASS", 
         "test results": {
           "Test 0": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/FSMDance_Quaternion/test_0.js:118\n    var m = generate_identity()\n            ^\n\nReferenceError: generate_identity is not defined\n    at Object.quaternion_to_rotation_matrix [as quaternionToRotationMatrix] (/manasjb/FSMDance_Quaternion/test_0.js:118:13)\n    at test_main (/manasjb/FSMDance_Quaternion/test_0.js:270:24)\n    at Object.<anonymous> (/home/eecs367/ROB51"
+            "Status": "Succeed", 
+            "Stderr": ""
           }
         }, 
         "comments": [
-          "0 out of 1 test cases passed"
+          "1 out of 1 test cases passed"
         ]
       }, 
       "FSMDance_BaseControl": {
