@@ -1,4 +1,4 @@
-//CI grader generates report at 30-10-2020-00-08-53
+//CI grader generates report at 30-10-2020-12-07-49
 grade = 
 {
   "manasjb": {
@@ -343,7 +343,7 @@ grade =
         "test results": {
           "Test 0": {
             "Status": "Failed", 
-            "Stderr": "quaternionFromAxisAngle undefined\nquaternionNormalize undefined\nquaternionMultiply undefined\nquaternionToRotationMatrix undefined\nAt least one function undefined\n"
+            "Stderr": "Error message too long, print partially: /manasjb/FSMDance_Quaternion/test_0.js:118\n    var m = generate_identity()\n            ^\n\nReferenceError: generate_identity is not defined\n    at Object.quaternion_to_rotation_matrix [as quaternionToRotationMatrix] (/manasjb/FSMDance_Quaternion/test_0.js:118:13)\n    at test_main (/manasjb/FSMDance_Quaternion/test_0.js:270:24)\n    at Object.<anonymous> (/home/eecs367/ROB51"
           }
         }, 
         "comments": [
