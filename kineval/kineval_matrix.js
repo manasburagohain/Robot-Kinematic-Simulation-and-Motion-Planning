@@ -74,11 +74,27 @@ function matrix_transpose(m) {
 
 }
 
-// function matrix_pseudoinverse(m) {
-//     // returns pseudoinverse of matrix m
-
-
-// }
+function matrix_pseudoinverse(m) {
+    // returns pseudoinverse of matrix m
+    var res = [];
+    var m_trans = matrix_transpose(m);
+    
+    if (m.length == m[0].length){
+        res = numeric.inv(m);
+    } else if (m.length > m[0].length){
+        // console.log(m.length, m[0].length)
+        // console.log(m_trans.length, m_trans[0].length,m.length,m[0].length)
+        var temp = matrix_multiply(m_trans,m);
+        // console.log(temp)
+        // console.log(numeric.inv(temp))
+        res = matrix_multiply(numeric.inv(temp), m_trans);
+    } else{
+        // console.log(m.length, m[0].length)
+        var temp = matrix_multiply(m,m_trans);
+        res = matrix_multiply(m_trans, numeric.inv(temp));
+    }
+    return res;
+}
 
 function matrix_invert_affine(m) {
     // returns 2D array that is the invert affine of 4-by-4 matrix m
@@ -205,12 +221,61 @@ function generate_rotation_matrix (r,p,y){
 
 }
 
+function rotation_matrix_to_axisangle(R) {
+    var thetaX, thetaY, thetaZ;
+
+    thetaX = Math.atan2(R[2][1], R[2][2]);
+    thetaZ = Math.atan2(R[1][0], R[0][0]);
+    thetaY = Math.atan2(-R[2][0],Math.pow(Math.pow(R[2][1], 2)+ Math.pow(R[2][2], 2), 0.5));
+
+    return [thetaX, thetaY, thetaZ];
+}
+
 function vector_dot(v1,v2){
     var v = new Array(v1.length);
     for (i=0;i<v1.length;++i){
-        
         v[i]=v1[i]*v2[i];
-        
     }
     return v;
+}
+
+function matrix_from_vector(v){
+    var mat = [];
+    for(var i = 0; i < v.length; ++i){
+        mat.push([]);
+        mat[i].push(v[i]);
+    }
+    return mat;
+}
+
+function matrix_vec_multiply(m1,v1){
+    var v = [];
+    var i;
+    var j;
+    v1 = [v1[0],v1[1],v1[2],0];
+    for (i=0;i<m1.length;++i){
+        v[i] = 0;
+        for (j=0;j<m1[0].length;++j){
+            v[i] += m1[i][j]*v1[j];
+        }
+    }
+    v = [v[0],v[1],v[2]];
+    return v;
+}
+
+function vec_minus(v1,v2) {
+    var res = [];
+    for (var i = 0; i < v1.length; i++) {
+        res.push(v1[i] - v2[i]);
+    }
+    return res;
+}
+
+function rev_vec(vec) {
+    var res = [];
+    var n = vec.length;
+    for (var i = n - 1; i>=0; i--) {
+        res[n-1-i] = vec[i];
+    }
+    return res;
 }
