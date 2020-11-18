@@ -1,4 +1,4 @@
-//CI grader generates report at 04-11-2020-00-10-43
+//CI grader generates report at 18-11-2020-12-05-16
 grade = 
 {
   "manasjb": {
@@ -537,8 +537,8 @@ grade =
       }
     ], 
     "participation": {
-      "status": 0.5, 
-      "comments": "Pod submitted name and logo"
+      "status": 3.0, 
+      "comments": "Pod submitted name and logo\nPod submitted dance off video Extra +2 Dance Off "
     }
   }
 }
