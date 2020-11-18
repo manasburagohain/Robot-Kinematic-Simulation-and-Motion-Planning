@@ -1,4 +1,4 @@
-//CI grader generates report at 18-11-2020-12-05-16
+//CI grader generates report at 18-11-2020-18-05-14
 grade = 
 {
   "manasjb": {
@@ -409,11 +409,11 @@ grade =
         "test results": {
           "Test 0": {
             "Status": "Failed", 
-            "Stderr": "robot.jacobian not defined, please check whether you have assigned value for robot.jacobian\n"
+            "Stderr": "Error message too long, print partially: /manasjb/IK_Jacobian/test_0.js:531\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_Jacobian/test_0.js:531:30)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/manasjb/IK_Jacobian/test_0.js:1834:20)\n    at Object.robot_inverse_kinematics [as robotInvers"
           }, 
           "Test 1": {
             "Status": "Failed", 
-            "Stderr": "robot.jacobian not defined, please check whether you have assigned value for robot.jacobian\n"
+            "Stderr": "Error message too long, print partially: /manasjb/IK_Jacobian/test_1.js:531\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_Jacobian/test_1.js:531:30)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/manasjb/IK_Jacobian/test_1.js:1834:20)\n    at Object.robot_inverse_kinematics [as robotInvers"
           }
         }, 
         "comments": [
@@ -425,15 +425,15 @@ grade =
         "test results": {
           "Test 2": {
             "Status": "Failed", 
-            "Stderr": "Target not reached\n"
+            "Stderr": "Error message too long, print partially: /manasjb/IK_JTranspose/test_2.js:537\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_JTranspose/test_2.js:537:30)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/manasjb/IK_JTranspose/test_2.js:1840:20)\n    at Object.robot_inverse_kinematics [as robot"
           }, 
           "Test 0": {
             "Status": "Failed", 
-            "Stderr": "robot.dq not defined, please check whether you have assigned value for robot.dq\n"
+            "Stderr": "Error message too long, print partially: /manasjb/IK_JTranspose/test_0.js:537\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_JTranspose/test_0.js:537:30)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/manasjb/IK_JTranspose/test_0.js:1840:20)\n    at Object.robot_inverse_kinematics [as robot"
           }, 
           "Test 1": {
             "Status": "Failed", 
-            "Stderr": "robot.dq not defined, please check whether you have assigned value for robot.dq\n"
+            "Stderr": "Error message too long, print partially: /manasjb/IK_JTranspose/test_1.js:537\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_JTranspose/test_1.js:537:30)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/manasjb/IK_JTranspose/test_1.js:1840:20)\n    at Object.robot_inverse_kinematics [as robot"
           }
         }, 
         "comments": [
@@ -445,15 +445,15 @@ grade =
         "test results": {
           "Test 2": {
             "Status": "Failed", 
-            "Stderr": "Target not reached\n"
+            "Stderr": "Error message too long, print partially: /manasjb/IK_JPseudoInverse/test_2.js:537\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_JPseudoInverse/test_2.js:537:30)\n    at matrix_pseudoinverse (/manasjb/IK_JPseudoInverse/test_2.js:574:20)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/home/ee"
           }, 
           "Test 0": {
             "Status": "Failed", 
-            "Stderr": "robot.dq not defined, please check whether you have assigned value for robot.dq\n"
+            "Stderr": "Error message too long, print partially: /manasjb/IK_JPseudoInverse/test_0.js:537\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_JPseudoInverse/test_0.js:537:30)\n    at matrix_pseudoinverse (/manasjb/IK_JPseudoInverse/test_0.js:574:20)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/home/ee"
           }, 
           "Test 1": {
             "Status": "Failed", 
-            "Stderr": "robot.dq not defined, please check whether you have assigned value for robot.dq\n"
+            "Stderr": "Error message too long, print partially: /manasjb/IK_JPseudoInverse/test_1.js:537\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_JPseudoInverse/test_1.js:537:30)\n    at matrix_pseudoinverse (/manasjb/IK_JPseudoInverse/test_1.js:574:20)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/home/ee"
           }
         }, 
         "comments": [
@@ -465,11 +465,11 @@ grade =
         "test results": {
           "Test 0": {
             "Status": "Failed", 
-            "Stderr": "robot.dx not defined, please check whether you have assigned value for robot.dx\n"
+            "Stderr": "Error message too long, print partially: /manasjb/IK_EulerAngles/test_0.js:531\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_EulerAngles/test_0.js:531:30)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/manasjb/IK_EulerAngles/test_0.js:1834:20)\n    at Object.robot_inverse_kinematics [as ro"
           }, 
           "Test 1": {
             "Status": "Failed", 
-            "Stderr": "robot.dx not defined, please check whether you have assigned value for robot.dx\n"
+            "Stderr": "Error message too long, print partially: /manasjb/IK_EulerAngles/test_1.js:531\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_EulerAngles/test_1.js:531:30)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/manasjb/IK_EulerAngles/test_1.js:1834:20)\n    at Object.robot_inverse_kinematics [as ro"
           }
         }, 
         "comments": [
