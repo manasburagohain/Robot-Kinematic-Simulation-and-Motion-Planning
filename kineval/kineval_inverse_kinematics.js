@@ -100,7 +100,6 @@ kineval.iterateIK = function iterate_inverse_kinematics(endeffector_target_world
     robot.jacobian = [[], [], [], [], [], []]; 
 
     for (var i = 0; i < joint_chain.length; i++) {
-        // var j = joint_chain.length - i - 1;
         var joint = robot.joints[joint_chain[i]];
         var joint_origin_world = matrix_multiply(joint.xform, [[0], [0], [0], [1]]);
 
@@ -119,14 +118,10 @@ kineval.iterateIK = function iterate_inverse_kinematics(endeffector_target_world
         }
     }
 
-    // robot.dq;
     if (kineval.params.ik_pseudoinverse) {
         var pseudoinverse = matrix_pseudoinverse(robot.jacobian);
-        // console.log('Pseudoinverse')
-        // console.log(pseudoinverse)
         robot.dq = matrix_multiply(pseudoinverse, robot.dx);
     } else {
-        // console.log('Transpose')
         robot.dq = matrix_multiply(matrix_transpose(robot.jacobian), robot.dx);
     }
 
@@ -134,5 +129,4 @@ kineval.iterateIK = function iterate_inverse_kinematics(endeffector_target_world
         robot.joints[joint_chain[i]].control += kineval.params.ik_steplength * robot.dq[i][0];
     }
 
-    // console.log(robot.dq)
 }

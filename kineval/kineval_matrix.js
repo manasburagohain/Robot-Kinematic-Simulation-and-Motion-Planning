@@ -58,7 +58,7 @@ function matrix_multiply(m1,m2) {
 function matrix_transpose(m) {
     // returns 2D array transpose
 
-    var res = new Array(m.length)    // creating a placeholder
+    var res = new Array(m[0].length)    // creating a placeholder
     
     for (i = 0; i < m[0].length; i++){
         res[i] = [];
