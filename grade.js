@@ -1,4 +1,4 @@
-//CI grader generates report at 18-11-2020-18-05-14
+//CI grader generates report at 19-11-2020-00-06-14
 grade = 
 {
   "manasjb": {
@@ -405,75 +405,75 @@ grade =
         ]
       }, 
       "IK_Jacobian": {
-        "status": "PENDING", 
+        "status": "PASS", 
         "test results": {
           "Test 0": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/IK_Jacobian/test_0.js:531\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_Jacobian/test_0.js:531:30)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/manasjb/IK_Jacobian/test_0.js:1834:20)\n    at Object.robot_inverse_kinematics [as robotInvers"
+            "Status": "Succeed", 
+            "Stderr": ""
           }, 
           "Test 1": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/IK_Jacobian/test_1.js:531\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_Jacobian/test_1.js:531:30)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/manasjb/IK_Jacobian/test_1.js:1834:20)\n    at Object.robot_inverse_kinematics [as robotInvers"
+            "Status": "Succeed", 
+            "Stderr": ""
           }
         }, 
         "comments": [
-          "0 out of 2 test cases passed"
+          "2 out of 2 test cases passed"
         ]
       }, 
       "IK_JTranspose": {
-        "status": "PENDING", 
+        "status": "PASS", 
         "test results": {
           "Test 2": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/IK_JTranspose/test_2.js:537\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_JTranspose/test_2.js:537:30)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/manasjb/IK_JTranspose/test_2.js:1840:20)\n    at Object.robot_inverse_kinematics [as robot"
+            "Status": "Succeed", 
+            "Stderr": ""
           }, 
           "Test 0": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/IK_JTranspose/test_0.js:537\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_JTranspose/test_0.js:537:30)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/manasjb/IK_JTranspose/test_0.js:1840:20)\n    at Object.robot_inverse_kinematics [as robot"
+            "Status": "Succeed", 
+            "Stderr": ""
           }, 
           "Test 1": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/IK_JTranspose/test_1.js:537\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_JTranspose/test_1.js:537:30)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/manasjb/IK_JTranspose/test_1.js:1840:20)\n    at Object.robot_inverse_kinematics [as robot"
+            "Status": "Succeed", 
+            "Stderr": ""
           }
         }, 
         "comments": [
-          "0 out of 3 test cases passed"
+          "3 out of 3 test cases passed"
         ]
       }, 
       "IK_JPseudoInverse": {
-        "status": "PENDING", 
+        "status": "PASS", 
         "test results": {
           "Test 2": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/IK_JPseudoInverse/test_2.js:537\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_JPseudoInverse/test_2.js:537:30)\n    at matrix_pseudoinverse (/manasjb/IK_JPseudoInverse/test_2.js:574:20)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/home/ee"
+            "Status": "Succeed", 
+            "Stderr": ""
           }, 
           "Test 0": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/IK_JPseudoInverse/test_0.js:537\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_JPseudoInverse/test_0.js:537:30)\n    at matrix_pseudoinverse (/manasjb/IK_JPseudoInverse/test_0.js:574:20)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/home/ee"
+            "Status": "Succeed", 
+            "Stderr": ""
           }, 
           "Test 1": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/IK_JPseudoInverse/test_1.js:537\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_JPseudoInverse/test_1.js:537:30)\n    at matrix_pseudoinverse (/manasjb/IK_JPseudoInverse/test_1.js:574:20)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/home/ee"
+            "Status": "Succeed", 
+            "Stderr": ""
           }
         }, 
         "comments": [
-          "0 out of 3 test cases passed"
+          "3 out of 3 test cases passed"
         ]
       }, 
       "IK_EulerAngles": {
-        "status": "PENDING", 
+        "status": "PASS", 
         "test results": {
           "Test 0": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/IK_EulerAngles/test_0.js:531\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_EulerAngles/test_0.js:531:30)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/manasjb/IK_EulerAngles/test_0.js:1834:20)\n    at Object.robot_inverse_kinematics [as ro"
+            "Status": "Succeed", 
+            "Stderr": ""
           }, 
           "Test 1": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/IK_EulerAngles/test_1.js:531\n                temp += m1[i][k] * m2[k][j]\n                             ^\n\nTypeError: Cannot read property '0' of undefined\n    at matrix_multiply (/manasjb/IK_EulerAngles/test_1.js:531:30)\n    at Object.iterate_inverse_kinematics [as iterateIK] (/manasjb/IK_EulerAngles/test_1.js:1834:20)\n    at Object.robot_inverse_kinematics [as ro"
+            "Status": "Succeed", 
+            "Stderr": ""
           }
         }, 
         "comments": [
-          "0 out of 2 test cases passed"
+          "2 out of 2 test cases passed"
         ]
       }, 
       "MotionPlan_Collision": {
