@@ -71,6 +71,7 @@ function initRRT(q) {
     tree.vertices[0] = {};
     tree.vertices[0].vertex = q;
     tree.vertices[0].edges = [];
+    tree.vertices[0].path = 0;
 
     // maintain index of newest vertex added to tree
     tree.newest = 0;
@@ -91,6 +92,7 @@ function insertTreeVertex(tree,q) {
 
     // draw location on canvas
     draw_2D_configuration(q, "visited");
+    return tree.newest;
 }
 
 
@@ -101,6 +103,9 @@ function insertTreeEdge(tree,q1_idx,q2_idx) {
 
     // add edge to second vertex as pointer to first vertex
     tree.vertices[q2_idx].edges.push(tree.vertices[q1_idx]);
+
+    tree.vertices[q1_idx].path = distance(tree.vertices[q1_idx].vertex, tree.vertices[q2_idx].vertex)
+        + tree.vertices[q2_idx].path;
 
     // draw edge on canvas
     draw_2D_edge_configurations(tree.vertices[q1_idx].vertex,tree.vertices[q2_idx].vertex);
@@ -194,22 +199,25 @@ function initSearch() {
     // search_alg = "depth-first";
     // search_alg = "breadth-first";
     // search_alg = "greedy-best-first";
-    search_alg = "A-star";
+    //search_alg = "A-star";
     //search_alg = "RRT";
     //search_alg = "RRT-connect";
-    //search_alg = "RRT-star";
+    search_alg = "RRT-star";
 
     // specify default the world for the planner
     //  (stored as "range" global variable with name "planning_scene")
-    planning_scene = "empty";
+    //planning_scene = "empty";
     // planning_scene = "misc";
-    // planning_scene = "narrow1";
+     planning_scene = "narrow1";
     // planning_scene = "narrow2";
     // planning_scene = "three_sections";
 
     // specify default eps (epsilon) spatial resolution variable
     //   for RRT, specifies threshold radius for step size and reaching goal
     eps = 0.1;
+    threshold_radius = 2 * eps;
+    RRT_connect_flag = true;
+
 
     // create event handlers for the mouse
     canvas = document.getElementById("myCanvas");
