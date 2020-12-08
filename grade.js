@@ -1,4 +1,4 @@
-//CI grader generates report at 08-12-2020-00-42-41
+//CI grader generates report at 08-12-2020-06-37-44
 grade = 
 {
   "manasjb": {
@@ -477,23 +477,23 @@ grade =
         ]
       }, 
       "MotionPlan_Collision": {
-        "status": "PENDING", 
+        "status": "PASS", 
         "test results": {
           "Test 2": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_Collision/test_2.js:896\n    var mstack = generate_transformation(xyz, rpy);\n                 ^\n\nReferenceError: generate_transformation is not defined\n    at robot_collision_forward_kinematics (/manasjb/MotionPlan_Collision/test_2.js:896:18)\n    at Object.robot_collision_test [as poseIsCollision] (/manasjb/MotionPlan_Collision/test_2.js:890:12)\n    at "
+            "Status": "Succeed", 
+            "Stderr": ""
           }, 
           "Test 0": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_Collision/test_0.js:896\n    var mstack = generate_transformation(xyz, rpy);\n                 ^\n\nReferenceError: generate_transformation is not defined\n    at robot_collision_forward_kinematics (/manasjb/MotionPlan_Collision/test_0.js:896:18)\n    at Object.robot_collision_test [as poseIsCollision] (/manasjb/MotionPlan_Collision/test_0.js:890:12)\n    at "
+            "Status": "Succeed", 
+            "Stderr": ""
           }, 
           "Test 1": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_Collision/test_1.js:896\n    var mstack = generate_transformation(xyz, rpy);\n                 ^\n\nReferenceError: generate_transformation is not defined\n    at robot_collision_forward_kinematics (/manasjb/MotionPlan_Collision/test_1.js:896:18)\n    at Object.robot_collision_test [as poseIsCollision] (/manasjb/MotionPlan_Collision/test_1.js:890:12)\n    at "
+            "Status": "Succeed", 
+            "Stderr": ""
           }
         }, 
         "comments": [
-          "0 out of 3 test cases passed"
+          "3 out of 3 test cases passed"
         ]
       }, 
       "MotionPlan_2DRRTConnect": {
@@ -501,19 +501,19 @@ grade =
         "test results": {
           "Test 2": {
             "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_2DRRTConnect/test_2.js:434\n    RRT_connect_flag = !RRT_connect_flag;\n    ^\n\nReferenceError: RRT_connect_flag is not defined\n    at iterateRRTConnect (/manasjb/MotionPlan_2DRRTConnect/test_2.js:434:5)\n    at Timeout.animate [as _onTimeout] (/manasjb/MotionPlan_2DRRTConnect/test_2.js:153:22)\n    at listOnTimeout (internal/timers.js:549:17)\n    at process"
+            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_2DRRTConnect/test_2.js:325\n\ttree.vertices[q2_idx].edges.push(tree.vertices[q1_idx]);\n\t                      ^\n\nTypeError: Cannot read property 'edges' of undefined\n    at insertTreeEdge (/manasjb/MotionPlan_2DRRTConnect/test_2.js:325:24)\n    at extendRRT (/manasjb/MotionPlan_2DRRTConnect/test_2.js:521:13)\n    at iterateRRTConnect (/home/eecs367/ROB511_"
           }, 
           "Test 3": {
             "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_2DRRTConnect/test_3.js:434\n    RRT_connect_flag = !RRT_connect_flag;\n    ^\n\nReferenceError: RRT_connect_flag is not defined\n    at iterateRRTConnect (/manasjb/MotionPlan_2DRRTConnect/test_3.js:434:5)\n    at Timeout.animate [as _onTimeout] (/manasjb/MotionPlan_2DRRTConnect/test_3.js:153:22)\n    at listOnTimeout (internal/timers.js:549:17)\n    at process"
+            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_2DRRTConnect/test_3.js:325\n\ttree.vertices[q2_idx].edges.push(tree.vertices[q1_idx]);\n\t                      ^\n\nTypeError: Cannot read property 'edges' of undefined\n    at insertTreeEdge (/manasjb/MotionPlan_2DRRTConnect/test_3.js:325:24)\n    at extendRRT (/manasjb/MotionPlan_2DRRTConnect/test_3.js:521:13)\n    at iterateRRTConnect (/home/eecs367/ROB511_"
           }, 
           "Test 0": {
             "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_2DRRTConnect/test_0.js:434\n    RRT_connect_flag = !RRT_connect_flag;\n    ^\n\nReferenceError: RRT_connect_flag is not defined\n    at iterateRRTConnect (/manasjb/MotionPlan_2DRRTConnect/test_0.js:434:5)\n    at Timeout.animate [as _onTimeout] (/manasjb/MotionPlan_2DRRTConnect/test_0.js:153:22)\n    at listOnTimeout (internal/timers.js:549:17)\n    at process"
+            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_2DRRTConnect/test_0.js:325\n\ttree.vertices[q2_idx].edges.push(tree.vertices[q1_idx]);\n\t                      ^\n\nTypeError: Cannot read property 'edges' of undefined\n    at insertTreeEdge (/manasjb/MotionPlan_2DRRTConnect/test_0.js:325:24)\n    at extendRRT (/manasjb/MotionPlan_2DRRTConnect/test_0.js:521:13)\n    at iterateRRTConnect (/home/eecs367/ROB511_"
           }, 
           "Test 1": {
             "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_2DRRTConnect/test_1.js:434\n    RRT_connect_flag = !RRT_connect_flag;\n    ^\n\nReferenceError: RRT_connect_flag is not defined\n    at iterateRRTConnect (/manasjb/MotionPlan_2DRRTConnect/test_1.js:434:5)\n    at Timeout.animate [as _onTimeout] (/manasjb/MotionPlan_2DRRTConnect/test_1.js:153:22)\n    at listOnTimeout (internal/timers.js:549:17)\n    at process"
+            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_2DRRTConnect/test_1.js:325\n\ttree.vertices[q2_idx].edges.push(tree.vertices[q1_idx]);\n\t                      ^\n\nTypeError: Cannot read property 'edges' of undefined\n    at insertTreeEdge (/manasjb/MotionPlan_2DRRTConnect/test_1.js:325:24)\n    at extendRRT (/manasjb/MotionPlan_2DRRTConnect/test_1.js:521:13)\n    at iterateRRTConnect (/home/eecs367/ROB511_"
           }
         }, 
         "comments": [
