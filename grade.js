@@ -1,4 +1,4 @@
-//CI grader generates report at 07-12-2020-18-46-02
+//CI grader generates report at 08-12-2020-00-42-41
 grade = 
 {
   "manasjb": {
@@ -481,15 +481,15 @@ grade =
         "test results": {
           "Test 2": {
             "Status": "Failed", 
-            "Stderr": "[ERROR]: Collision test 2 failed\n"
+            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_Collision/test_2.js:896\n    var mstack = generate_transformation(xyz, rpy);\n                 ^\n\nReferenceError: generate_transformation is not defined\n    at robot_collision_forward_kinematics (/manasjb/MotionPlan_Collision/test_2.js:896:18)\n    at Object.robot_collision_test [as poseIsCollision] (/manasjb/MotionPlan_Collision/test_2.js:890:12)\n    at "
           }, 
           "Test 0": {
             "Status": "Failed", 
-            "Stderr": "[ERROR]: Collision test 0 failed\n"
+            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_Collision/test_0.js:896\n    var mstack = generate_transformation(xyz, rpy);\n                 ^\n\nReferenceError: generate_transformation is not defined\n    at robot_collision_forward_kinematics (/manasjb/MotionPlan_Collision/test_0.js:896:18)\n    at Object.robot_collision_test [as poseIsCollision] (/manasjb/MotionPlan_Collision/test_0.js:890:12)\n    at "
           }, 
           "Test 1": {
             "Status": "Failed", 
-            "Stderr": "[ERROR]: Collision test 1 failed\n"
+            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_Collision/test_1.js:896\n    var mstack = generate_transformation(xyz, rpy);\n                 ^\n\nReferenceError: generate_transformation is not defined\n    at robot_collision_forward_kinematics (/manasjb/MotionPlan_Collision/test_1.js:896:18)\n    at Object.robot_collision_test [as poseIsCollision] (/manasjb/MotionPlan_Collision/test_1.js:890:12)\n    at "
           }
         }, 
         "comments": [
@@ -501,19 +501,19 @@ grade =
         "test results": {
           "Test 2": {
             "Status": "Failed", 
-            "Stderr": "Timeout!"
+            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_2DRRTConnect/test_2.js:434\n    RRT_connect_flag = !RRT_connect_flag;\n    ^\n\nReferenceError: RRT_connect_flag is not defined\n    at iterateRRTConnect (/manasjb/MotionPlan_2DRRTConnect/test_2.js:434:5)\n    at Timeout.animate [as _onTimeout] (/manasjb/MotionPlan_2DRRTConnect/test_2.js:153:22)\n    at listOnTimeout (internal/timers.js:549:17)\n    at process"
           }, 
           "Test 3": {
             "Status": "Failed", 
-            "Stderr": "Timeout!"
+            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_2DRRTConnect/test_3.js:434\n    RRT_connect_flag = !RRT_connect_flag;\n    ^\n\nReferenceError: RRT_connect_flag is not defined\n    at iterateRRTConnect (/manasjb/MotionPlan_2DRRTConnect/test_3.js:434:5)\n    at Timeout.animate [as _onTimeout] (/manasjb/MotionPlan_2DRRTConnect/test_3.js:153:22)\n    at listOnTimeout (internal/timers.js:549:17)\n    at process"
           }, 
           "Test 0": {
             "Status": "Failed", 
-            "Stderr": "[ERROR]: Search time out\n"
+            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_2DRRTConnect/test_0.js:434\n    RRT_connect_flag = !RRT_connect_flag;\n    ^\n\nReferenceError: RRT_connect_flag is not defined\n    at iterateRRTConnect (/manasjb/MotionPlan_2DRRTConnect/test_0.js:434:5)\n    at Timeout.animate [as _onTimeout] (/manasjb/MotionPlan_2DRRTConnect/test_0.js:153:22)\n    at listOnTimeout (internal/timers.js:549:17)\n    at process"
           }, 
           "Test 1": {
             "Status": "Failed", 
-            "Stderr": "Timeout!"
+            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_2DRRTConnect/test_1.js:434\n    RRT_connect_flag = !RRT_connect_flag;\n    ^\n\nReferenceError: RRT_connect_flag is not defined\n    at iterateRRTConnect (/manasjb/MotionPlan_2DRRTConnect/test_1.js:434:5)\n    at Timeout.animate [as _onTimeout] (/manasjb/MotionPlan_2DRRTConnect/test_1.js:153:22)\n    at listOnTimeout (internal/timers.js:549:17)\n    at process"
           }
         }, 
         "comments": [
