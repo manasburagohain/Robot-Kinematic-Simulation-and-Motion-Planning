@@ -223,6 +223,7 @@ function tree_init(q) {
     tree.vertices[0] = {};
     tree.vertices[0].vertex = q;
     tree.vertices[0].edges = [];
+    tree.vertices[0].path = 0;
 
     // create rendering geometry for base location of vertex configuration
     add_config_origin_indicator_geom(tree.vertices[0]);
@@ -234,8 +235,6 @@ function tree_init(q) {
 }
 
 function tree_add_vertex(tree,q) {
-
-
     // create new vertex object for tree with given configuration and no edges
     var new_vertex = {};
     new_vertex.edges = [];
@@ -247,6 +246,8 @@ function tree_add_vertex(tree,q) {
     // maintain index of newest vertex added to tree
     tree.vertices.push(new_vertex);
     tree.newest = tree.vertices.length - 1;
+
+    return tree.newest;
 }
 
 function add_config_origin_indicator_geom(vertex) {
@@ -275,6 +276,9 @@ function tree_add_edge(tree,q1_idx,q2_idx) {
     tree.vertices[q2_idx].edges.push(tree.vertices[q1_idx]);
 
     // can draw edge here, but not doing so to save rendering computation
+
+    tree.vertices[q1_idx].path = distance(tree.vertices[q1_idx].vertex, tree.vertices[q2_idx].vertex)
+        + tree.vertices[q2_idx].path;
 }
 
 //////////////////////////////////////////////////
