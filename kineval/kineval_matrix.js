@@ -286,3 +286,138 @@ function rev_vec(vec) {
     }
     return res;
 }
+
+////////////////////
+//LU DECOMPOSITION//
+////////////////////
+
+function generate_identity_n(dim=4) {
+    // return I: dim x dim matrix
+    var i, j;
+    var I = [];
+    for (i = 0; i < dim; i++) {
+        I[i] = [];
+        for (j = 0; j < dim; j++) {
+            I[i][j] = (i === j) ? 1 : 0;
+        }
+    }
+    return I;
+}
+
+function matrix_inverse(m) {
+    // m: n x n matrix
+    // return m^(-1): n x n matrix
+    if (m.length !== m[0].length) {
+        return matrix_pseudoinverse(m);
+    }
+
+    var PLU = LU_pivoting_decomposition(m);
+    var P = PLU.P;
+    var L = PLU.L;
+    var U = PLU.U;
+
+    var invL = generate_identity_n(L.length);
+    var invU = generate_identity_n(U.length);
+
+    for (var i = 0; i < m.length; i++) {
+        for (var k = i + 1; k < m.length; k++) {
+            for (var j = i; j <= k - 1; j++) {
+                invL[k][i] -= L[k][j] * invL[j][i];
+            }
+        }
+    }
+    for (var i = 0; i < m.length; i++) {
+        invU[i][i] = 1 / U[i][i];
+        for (var k = i - 1; k >= 0; k--) {
+            var tmp = 0;
+            for (var j = k + 1; j <= i; j++) {
+                tmp += U[k][j] * invU[j][i];
+            }
+            invU[k][i] = -tmp / U[k][k];
+        }
+    }
+    return matrix_multiply(matrix_multiply(invU, invL), P);
+}
+
+function LU_pivoting_decomposition(m) {
+    // m: n x n matrix
+    // return {"P": P, "L": L, "U": U}
+    var n = m.length;
+    var P = generate_identity_n(n);
+    var L = generate_identity_n(n);
+    var U = matrix_copy(m);
+
+    for (var i = 0; i < n - 1; i++) {
+        var maxIndex = getMaxIndexInColumn(U, i);
+
+        if (i !== maxIndex) {
+            for (var j = i; j < n; j++) {
+                var tmp = U[i][j];
+                U[i][j] = U[maxIndex][j];
+                U[maxIndex][j] = tmp;
+            }
+            for (j = 0; j < i; j++) {
+                tmp = L[i][j];
+                L[i][j] = L[maxIndex][j];
+                L[maxIndex][j] = tmp;
+            }
+            tmp = P[i];
+            P[i] = P[maxIndex];
+            P[maxIndex] = tmp;
+        }
+
+        for (j = i + 1; j < n; j++) {
+            tmp = U[j][i] / U[i][i];
+            L[j][i] = tmp;
+            for (var k = i; k < n; k++) {
+                U[j][k] -= tmp * U[i][k];
+            }
+        }
+    }
+
+    return {"P": P, "L": L, "U": U};
+
+    function getMaxIndexInColumn(U, j) {
+        var max = Math.abs(U[j][j]);
+        var maxIndex = j;
+        for (var i = j + 1; i < U.length; i++) {
+            var entry = Math.abs(U[i][j]);
+            if (entry > max) {
+                max = entry;
+                maxIndex = i;
+            }
+        }
+        return maxIndex;
+    }
+}
+
+function linear_solve(A, b) {
+    // return x, where A x = b
+    var i, j, sum;
+    var PLU = LU_pivoting_decomposition(A);
+    var P = PLU.P;
+    var L = PLU.L;
+    var U = PLU.U;
+
+    var P_b = matrix_multiply(P, b);
+
+    var U_x = [];
+    for (i = 0; i < b.length; i++) {
+        U_x[i] = [];
+        sum = 0;
+        for (j = 0; j < i; j++) {
+            sum += L[i][j] * U_x[j][0];
+        }
+        U_x[i][0] = P_b[i][0] - sum;
+    }
+
+    var x = [];
+    for (i = b.length - 1; i >= 0; i--) {
+        sum = 0;
+        for (j = i + 1; j < b.length; j++) {
+            sum += U[i][j] * x[j - i - 1][0];
+        }
+        x.unshift([(U_x[i][0] - sum) / U[i][i]]);
+    }
+    return x;
+}
