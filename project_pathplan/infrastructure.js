@@ -207,8 +207,8 @@ function initSearch() {
     // specify default the world for the planner
     //  (stored as "range" global variable with name "planning_scene")
     //planning_scene = "empty";
-    // planning_scene = "misc";
-     planning_scene = "narrow1";
+     planning_scene = "misc";
+    // planning_scene = "narrow1";
     // planning_scene = "narrow2";
     // planning_scene = "three_sections";
 

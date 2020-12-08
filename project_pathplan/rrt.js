@@ -67,9 +67,9 @@ function iterateRRTConnect() {
         return "failed";
     }
 
-    // if (search_iter_count == 1){
-    //     RRT_connect_flag = true
-    // }
+    if (search_iter_count == 1){
+        RRT_connect_flag = true
+    }
 
     var q_random = randomConfig();
 
