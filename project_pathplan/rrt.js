@@ -241,8 +241,8 @@ function extendRRTStar(T, q) {
         rewrite(neighbors, T.vertices[idx]);
 
         if (distance(newVertex, q) < eps) {
-            insertTreeVertex(T, q);
-            insertTreeEdge(T, T.vertices.length - 1, idx);
+            // insertTreeVertex(T, q);
+            // insertTreeEdge(T, T.vertices.length - 1, idx);
             return "reached";
         } else {
             return "advanced";
@@ -311,15 +311,3 @@ function hashcode(q) {
     }
     return hash1 + ' ' + hash2;
 }
-
-//////////////////////////////////////////////////
-/////     RRT IMPLEMENTATION FUNCTIONS
-//////////////////////////////////////////////////
-
-    // STENCIL: implement RRT-Connect functions here, such as:
-    //   extendRRT
-    //   connectRRT
-    //   randomConfig
-    //   newConfig
-    //   findNearestNeighbor
-    //   dfsPath

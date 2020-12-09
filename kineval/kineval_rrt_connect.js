@@ -402,17 +402,17 @@ function find_path(T) {
         return path;
     }
     
-    function path_dfs(T) {
-        var path = [];
-        var curr = T.vertices[T.newest];
-    
-        while (curr !== T.vertices[0]) {
-            path.push(curr);
-            curr = curr.edges[0];
-        }
+function path_dfs(T) {
+    var path = [];
+    var curr = T.vertices[T.newest];
+
+    while (curr !== T.vertices[0]) {
         path.push(curr);
-        return path;
+        curr = curr.edges[0];
     }
+    path.push(curr);
+    return path;
+}
     
 function rrt_star_extend(T, q) {
     rrt_iter_count++;
