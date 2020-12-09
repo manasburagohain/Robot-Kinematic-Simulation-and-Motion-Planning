@@ -1,4 +1,4 @@
-//CI grader generates report at 08-12-2020-18-35-18
+//CI grader generates report at 09-12-2020-00-32-08
 grade = 
 {
   "manasjb": {
@@ -497,27 +497,27 @@ grade =
         ]
       }, 
       "MotionPlan_2DRRTConnect": {
-        "status": "PENDING", 
+        "status": "PASS", 
         "test results": {
           "Test 2": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_2DRRTConnect/test_2.js:325\n\ttree.vertices[q2_idx].edges.push(tree.vertices[q1_idx]);\n\t                      ^\n\nTypeError: Cannot read property 'edges' of undefined\n    at insertTreeEdge (/manasjb/MotionPlan_2DRRTConnect/test_2.js:325:24)\n    at extendRRT (/manasjb/MotionPlan_2DRRTConnect/test_2.js:521:13)\n    at iterateRRTConnect (/home/eecs367/ROB511_"
+            "Status": "Succeed", 
+            "Stderr": ""
           }, 
           "Test 3": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_2DRRTConnect/test_3.js:325\n\ttree.vertices[q2_idx].edges.push(tree.vertices[q1_idx]);\n\t                      ^\n\nTypeError: Cannot read property 'edges' of undefined\n    at insertTreeEdge (/manasjb/MotionPlan_2DRRTConnect/test_3.js:325:24)\n    at extendRRT (/manasjb/MotionPlan_2DRRTConnect/test_3.js:521:13)\n    at iterateRRTConnect (/home/eecs367/ROB511_"
+            "Status": "Succeed", 
+            "Stderr": ""
           }, 
           "Test 0": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_2DRRTConnect/test_0.js:325\n\ttree.vertices[q2_idx].edges.push(tree.vertices[q1_idx]);\n\t                      ^\n\nTypeError: Cannot read property 'edges' of undefined\n    at insertTreeEdge (/manasjb/MotionPlan_2DRRTConnect/test_0.js:325:24)\n    at extendRRT (/manasjb/MotionPlan_2DRRTConnect/test_0.js:521:13)\n    at iterateRRTConnect (/home/eecs367/ROB511_"
+            "Status": "Succeed", 
+            "Stderr": ""
           }, 
           "Test 1": {
-            "Status": "Failed", 
-            "Stderr": "Error message too long, print partially: /manasjb/MotionPlan_2DRRTConnect/test_1.js:325\n\ttree.vertices[q2_idx].edges.push(tree.vertices[q1_idx]);\n\t                      ^\n\nTypeError: Cannot read property 'edges' of undefined\n    at insertTreeEdge (/manasjb/MotionPlan_2DRRTConnect/test_1.js:325:24)\n    at extendRRT (/manasjb/MotionPlan_2DRRTConnect/test_1.js:521:13)\n    at iterateRRTConnect (/home/eecs367/ROB511_"
+            "Status": "Succeed", 
+            "Stderr": ""
           }
         }, 
         "comments": [
-          "0 out of 4 test cases passed"
+          "4 out of 4 test cases passed"
         ]
       }, 
       "MotionPlan_CSpaceRRTConnect": {
