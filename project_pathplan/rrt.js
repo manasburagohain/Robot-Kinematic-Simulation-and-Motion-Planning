@@ -166,7 +166,7 @@ function randomConfig() {
 }
 
 function extendRRT(T, q) {
-    search_iter_count++;
+    //search_iter_count++;
     var nearestIdx = findNearestNeighbor(T, q);
     var nearestVertex = T.vertices[nearestIdx].vertex;
     var newVertex = [];
@@ -179,8 +179,8 @@ function extendRRT(T, q) {
         insertTreeEdge(T, T.vertices.length - 1, nearestIdx);
 
         if (distance(newVertex, q) < eps) {
-            insertTreeVertex(T, q);
-            insertTreeEdge(T, T.vertices.length - 1, idx);
+            // insertTreeVertex(T, q);
+            // insertTreeEdge(T, T.vertices.length - 1, idx);
             return "reached";
         } else {
             return "iterating";
@@ -241,8 +241,8 @@ function extendRRTStar(T, q) {
         rewrite(neighbors, T.vertices[idx]);
 
         if (distance(newVertex, q) < eps) {
-            // insertTreeVertex(T, q);
-            // insertTreeEdge(T, T.vertices.length - 1, idx);
+            insertTreeVertex(T, q);
+            insertTreeEdge(T, T.vertices.length - 1, idx);
             return "reached";
         } else {
             return "advanced";
