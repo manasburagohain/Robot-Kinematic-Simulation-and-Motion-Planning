@@ -400,7 +400,7 @@ function find_path(T) {
             path[i].geom.material.color = {r:1, g:0, b:0};
         }
         return path;
-}
+    }
     
 function path_dfs(T) {
         var path = [];
@@ -409,8 +409,8 @@ function path_dfs(T) {
         while (curr !== T.vertices[0]) {
             path.push(curr);
             curr = curr.edges[0];
-}
-    
+        }
+}    
 function rrt_star_extend(T, q) {
     rrt_iter_count++;
     var nearestIdx = nearest_neighbor(T, q);

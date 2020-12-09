@@ -47,7 +47,7 @@ kineval.randomizeIKtrial = function randomIKtrial () {
 
     // if target reached, increment scoring and generate new target location
     // KE 2 : convert hardcoded constants into proper parameters
-    if (kineval.params.trial_ik_random.distance_current < 0.01) {
+    if (kineval.params.trial_ik_random.distance_current < 0.025) {
         kineval.params.ik_target.position[0][0] = 1.2*(Math.random()-0.5);
         kineval.params.ik_target.position[1][0] = 1.2*(Math.random()-0.5)+1.5;
         kineval.params.ik_target.position[2][0] = 0.7*(Math.random()-0.5)+0.5;
